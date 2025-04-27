@@ -21,7 +21,7 @@ Matplotlib (matplotlib)
 Used to visualize the results of the model training, including plotting the confusion matrix, classification report, and a bar chart showing the correct predictions per class. Visualization helps in better understanding the model's performance.
 
 Dataset Information
-The dataset used in this project consists of images organized in folders, where each folder corresponds to a distinct class. The images within each folder are used to extract texture features using the GLCM method.
+The dataset used in this project consists of images organized in folders, where each folder corresponds to a distinct class. The images within each folder are used to extract texture features using the GLCM method. Dataset used: https://www.kaggle.com/datasets/ahmedhamada0/brain-tumor-detection
 
 Preparing Your Dataset
 To use your own dataset:
