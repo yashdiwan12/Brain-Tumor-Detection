@@ -35,20 +35,11 @@ Make sure the dataset contains a variety of images for each class to ensure bett
 How the Model is Trained
 The following steps outline the process of training and evaluating the model:
 
-1. Feature Extraction using GLCM
-The first step in the model is to extract texture features from the images using the GLCM method. The GLCM computes the spatial relationship between pixel intensities in the image, and from this matrix, we derive important features such as:
+1. Extract Texture Features with GLCM. The first step is to analyze the images using the GLCM method, which looks at how pixel brightness levels relate to each other in space. From this, we get key features like contrast, homogeneity, energy, and correlation—these help the model tell different textures apart.
 
-Contrast
+2. Split the Data into Training and Testing Sets. Usually, about 80% of the data is used for training the Support Vector Machine (SVM), and the remaining 20% is set aside to test how well the model performs. We use a tool called train_test_split from scikit-learn to do this.
 
-Homogeneity
-
-Energy
-
-Correlation
-
-These features are crucial for distinguishing between different textures in the images, which are later used for classification.
-
-2. Train-Test Split
+3. Train-Test Split
 The dataset is divided into two parts:
 
 Training Set (80%): Used to train the SVM classifier.
@@ -58,7 +49,7 @@ Testing Set (20%): Used to evaluate the model's performance.
 We use Scikit-learn’s train_test_split function to divide the data.
 
 3. Train the SVM Model
-The Support Vector Machine (SVM) classifier is trained on the texture features extracted from the training set. SVM is a powerful classification algorithm that creates a decision boundary to separate different classes based on the features.
+Train the SVM(Support Vector Machine) Classifier. The SVM learns to distinguish between classes using the texture features from the training data. It draws a boundary to separate different categories based on those features.
 
 4. Model Evaluation
 After training, the model is evaluated using the testing set. Evaluation metrics include:
